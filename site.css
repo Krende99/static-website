@@ -1,0 +1,53 @@
+﻿/* Общие стили */
+/* Сброс стилей для элементов */ body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Шрифт по умолчанию */
+    line-height: 1.6; /* Межстрочный интервал */
+}
+/* Шапка сайта */ header {
+    background-color: #333; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 20px; /* Отступы внутри */
+    text-align: center;
+}
+/* Навигационное меню */ nav ul {
+    list-style: none; /* Убираем маркеры у списка */
+}
+
+    nav ul li {
+        display: inline; /* Элементы списка располагаются горизонтально */
+        margin-right: 20px; /* Отступы между пунктами */
+    }
+
+        nav ul li a {
+            text-decoration: none; /* Убираем подчеркивание у ссылок */
+            color: #fff; /* Цвет текста ссылок */
+        }
+/* Основной контент */
+main {
+    padding: 20px;
+}
+/* Секция последних новостей */ section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px; /* Размер заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+article {
+    border: 1px solid #ccc; /* Граница блока */
+    padding: 10px; /* Отступ внутри блока */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+/* Подвал сайта */ footer {
+    background-color: #333; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    text-align: center;
+    padding: 10px; /* Отступы внутри */
+}

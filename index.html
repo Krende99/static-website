@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html> 
+<html lang="ru"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>FreshNews</title> 
+    <link rel="stylesheet" href="site.css"> 
+</head> 
+ 
+<body> 
+    <header> 
+        <h1>FreshNews</h1> 
+        <nav> 
+            <ul> 
+                <li><a href="#home">Главная</a></li> 
+                <li><a href="#news">Новости</a></li> 
+                <li><a href="#about">О нас</a></li> 
+                <li><a href="#contact">Контакты</a></li> 
+            </ul> 
+        </nav> 
+    </header> 
+ 
+    <main> 
+        <section> 
+            <h2>Последние новости</h2> 
+            <article> 
+                <h3>Заголовок новости 1</h3> 
+                <p>Текст новости 1...</p> 
+                <img src="путь_к_изображению_1.jpg" alt="Описание изображения 1"> 
+            </article> 
+            <article> 
+                <h3>Заголовок новости 2</h3> 
+                <p>Текст новости 2...</p> 
+                <img src="путь_к_изображению_2.jpg" alt="Описание изображения 2"> 
+            </article> 
+            <article> 
+                <h3>Заголовок новости 3</h3> 
+                <p>Текст новости 3...</p> 
+                <img src="путь_к_изображению_3.jpg" alt="Описание изображения 3"> 
+            </article> 
+            <article> 
+                <h3>Заголовок новости 4</h3> 
+                <p>Текст новости 4...</p> 
+                <img src="путь_к_изображению_4.jpg" alt="Описание изображения 4"> 
+            </article> 
+            <article> 
+                <h3>Заголовок новости 5</h3> 
+                <p>Текст новости 5...</p> 
+                <img src="путь_к_изображению_5.jpg" alt="Описание изображения 5"> 
+            </article> 
+            <article> 
+                <h3>Заголовок новости 6</h3> 
+                <p>Текст новости 6...</p> 
+                <img src="путь_к_изображению_6.jpg" alt="Описание изображения 6"> 
+            </article> 
+            <article> 
+                <h3>Заголовок новости 7</h3> 
+                <p>Текст новости 7...</p> 
+                <img src="путь_к_изображению_7.jpg" alt="Описание изображения 7"> 
+            </article> 
+            <article> 
+                <h3>Заголовок новости 8</h3> 
+                <p>Текст новости 8...</p> 
+                <img src="путь_к_изображению_8.jpg" alt="Описание изображения 8"> 
+            </article> 
+        </section> 
+    </main> 
+ 
+    <footer> 
+        <p>&copy; 2023 FreshNews. Все права защищены.</p> 
+    </footer> 
+ 
+    <script> 
+        const apiKey = 'b1ef19eef47940cd91f1de8e75122890'; 
+ 
+        function getNews() { 
+            fetch(`https://newsapi.org/v2/top-headlines?country=ru&apiKey=${apiKey}`) 
+                .then(response => response.json()) 
+                .then(data => { 
+                    const articles = document.querySelectorAll('article'); 
+                    data.articles.slice(0, 8).forEach((news, index) => { 
+                        articles[index].querySelector('h3').textContent = news.title; 
+                        articles[index].querySelector('p').textContent = news.description; 
+                        articles[index].querySelector('img').src = news.urlToImage; 
+                        articles[index].querySelector('img').alt = news.title; 
+                    }); 
+                }) 
+                .catch(error => { 
+                    console.error('Произошла ошибка при получении новостей:', error); 
+                }); 
+        } 
+ 
+        getNews(); 
+ 
+        setInterval(getNews, 300000); // Обновление новостей каждые 5 минут (300 000 миллисекунд) 
+    </script> 
+</body> 
+ 
+</html>

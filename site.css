@@ -1,53 +1,73 @@
 ﻿/* Общие стили */
-/* Сброс стилей для элементов */ body, h1, h2, h3, h4, h5, h6, p, ul, li {
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif; /* Шрифт по умолчанию */
-    line-height: 1.6; /* Межстрочный интервал */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
-/* Шапка сайта */ header {
-    background-color: #333; /* Цвет фона */
-    color: #fff; /* Цвет текста */
-    padding: 20px; /* Отступы внутри */
+
+/* Шапка сайта */
+header {
+    background-color: #03036b; /* Тёмно-синий цвет */
+    color: #fff;
+    padding: 20px;
     text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
 }
-/* Навигационное меню */ nav ul {
-    list-style: none; /* Убираем маркеры у списка */
+
+/* Навигационное меню */
+nav ul {
+    list-style: none;
 }
 
     nav ul li {
-        display: inline; /* Элементы списка располагаются горизонтально */
-        margin-right: 20px; /* Отступы между пунктами */
+        display: inline;
+        margin-right: 20px;
     }
 
         nav ul li a {
-            text-decoration: none; /* Убираем подчеркивание у ссылок */
-            color: #fff; /* Цвет текста ссылок */
+            text-decoration: none;
+            color: #fff;
         }
+
 /* Основной контент */
 main {
     padding: 20px;
 }
-/* Секция последних новостей */ section {
+
+/* Секция последних новостей */
+section {
     margin-bottom: 20px;
+    border: 1px solid #000080;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 24px; /* Размер заголовка */
-    margin-bottom: 10px; /* Отступ снизу */
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 article {
-    border: 1px solid #ccc; /* Граница блока */
-    padding: 10px; /* Отступ внутри блока */
-    margin-bottom: 15px; /* Отступ снизу */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
 }
-/* Подвал сайта */ footer {
-    background-color: #333; /* Цвет фона */
-    color: #fff; /* Цвет текста */
+
+/* Подвал сайта */
+footer {
+    background-color: #03036b; /* Тёмно-синий цвет */
+    color: #fff;
     text-align: center;
-    padding: 10px; /* Отступы внутри */
+    padding: 10px;
+    border-top: 2px solid #ccc;
+    margin-top: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
